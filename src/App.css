@@ -1,38 +1,63 @@
-.App {
+body{
+    font-family: Montserrat;
+}
+.btn-primary{
+    color: #fff !important;
+    background: linear-gradient(180deg, #32B1E8 0%, #4898DD 100%) !important;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24) !important;
+    border-radius: 2px !important;
+     border: none !important;
+    padding: auto 4em !important;
+}
+
+.main-section{
+  height: 800px;
+background-image: url("./images/bg.png");
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: right;
+min-height: 500px;
+background-size: cover;
+}
+.main-section .header-content {
+
+  margin: 5rem auto;
+  width: 460px;
+}
+
+.main-section .header-content h2 {
+
+font-family: Montserrat;
+font-style: normal;
+font-weight: 300;
+font-size: 60px;
+line-height: 70px;
+/* identical to box height, or 117% */
+
+text-transform: capitalize;
+}
+
+.team {
+    text-align: center;
+    padding-top: 4rem ;
+    padding-bottom: 4rem ;
+}
+
+.games .card{
+    line-height: 2rem;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 0;
+    margin: 3rem;
+  }
+
+.games  .card__img img{
+  width: 100%;
+}
+
+.card__desc{
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  margin: 2rem auto;
 }
