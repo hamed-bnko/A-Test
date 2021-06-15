@@ -1,11 +1,12 @@
 import React from "react";
 import { Row, Col, Button } from "react-bootstrap";
+import pic from "../../../images/Frame.png";
 const GamesSection = () => {
   const games = [
-    { text: "PLAYTHEM Games", image: "/images/Frame.png", selected: true },
-    { text: "PLAYTHEM Games", image: "/images/Frame.png" },
-    { text: "PLAYTHEM Games", image: "/images/Frame.png" },
-    { text: "PLAYTHEM Games", image: "/images/Frame.png" },
+    { text: "PLAYTHEM Games", image: { pic }, selected: true },
+    { text: "PLAYTHEM Games", image: { pic } },
+    { text: "PLAYTHEM Games", image: { pic } },
+    { text: "PLAYTHEM Games", image: { pic } },
   ];
   return (
     <section className="games text-center">
@@ -16,24 +17,21 @@ const GamesSection = () => {
         cupidatat non proident
       </p>
       <Row>
-        {games &&
-          games.map((game) => (
-            <Col md={3}>
-              <div className="card">
-                <div className="card__img">
-                  <img src={game.image} alt="" />
-                </div>
-                <p className="card__desc text-center">{game.text}</p>
-                <Button
-                  variant={
-                    game && game.selected ? "primary" : "outline-primary"
-                  }
-                >
-                  Primary
-                </Button>{" "}
+        {games.map((game, i) => (
+          <Col md={3} key={i}>
+            <div className="card">
+              <div className="card__img">
+                <img src={pic} alt="" />
               </div>
-            </Col>
-          ))}
+              <p className="card__desc text-center">{game.text}</p>
+              <Button
+                variant={game && game.selected ? "primary" : "outline-primary"}
+              >
+                Primary
+              </Button>{" "}
+            </div>
+          </Col>
+        ))}
       </Row>
     </section>
   );

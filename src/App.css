@@ -20,7 +20,7 @@ min-height: 500px;
 background-size: cover;
 }
 .main-section .header-content {
-
+  padding: 1rem;
   margin: 5rem auto;
   width: 460px;
 }
@@ -60,4 +60,15 @@ text-transform: capitalize;
 .card__desc{
   text-align: center;
   margin: 2rem auto;
+}
+
+@media (max-width : 767px) {
+
+  .main-section .header-content {
+    background-color: rgba(252, 249, 249, 0.5);
+    
+  padding: 1rem;
+  margin: 5rem auto;
+  width: 460px;
+}
 }

@@ -1,15 +1,16 @@
 import React from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-
+import logo from "../../images/logo.png";
 const NavBars = () => {
   return (
     <>
-      <Navbar variant="light">
-        <Container>
-          <Navbar.Brand href="#home">
-            <img src="/images/logo.png" width="200" />
-          </Navbar.Brand>
-          <Nav className="m-auto">
+      <Navbar variant="light" expand="lg">
+        <Navbar.Brand href="#home">
+          <img src={logo} width="200" />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mr-auto">
             <Nav.Link href="#home">OurGames</Nav.Link>
             <Nav.Link href="#features">Platform</Nav.Link>
             <Nav.Link href="#pricing">Use Case</Nav.Link>
@@ -20,7 +21,7 @@ const NavBars = () => {
               Get Started Now
             </Nav.Link>
           </Nav>
-        </Container>
+        </Navbar.Collapse>
       </Navbar>
     </>
   );
